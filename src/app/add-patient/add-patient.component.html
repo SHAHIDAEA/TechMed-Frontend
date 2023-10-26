@@ -1,0 +1,48 @@
+<app-admin-header></app-admin-header>
+
+<h1 class="text-center container mt-5" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:  #21D192;">Add New Patient</h1>
+<form [formGroup]="addpatientForm" action="" class="w-50 container text-center">
+    <input formControlName="pId"  type="text" id="p1" placeholder="PId" class="form-control mt-2">
+    <div *ngIf="this.addpatientForm.get('pId')?.errors && this.addpatientForm.get('pId')?.touched">
+        <p class="text-center text-danger">*Include Numbers Only</p>
+    </div>
+    <input formControlName="pname"  type="text" id="p2" placeholder="Patient Name" class="form-control mt-2">
+    <div *ngIf="this.addpatientForm.get('pname')?.errors && this.addpatientForm.get('pname')?.touched">
+        <p class="text-center text-danger">*Include Characters Only</p>
+    </div>
+
+    <input formControlName="age"  type="text" id="p3" placeholder="age" class="form-control mt-2">
+    <div *ngIf="this.addpatientForm.get('age')?.errors && this.addpatientForm.get('age')?.touched">
+        <p class="text-center text-danger">*Accept Numbers Only</p>
+    </div>
+
+    <input formControlName="sex"  type="text" id="p4" placeholder="Sex" class="form-control mt-2">
+    <div *ngIf="this.addpatientForm.get('sex')?.errors && this.addpatientForm.get('sex')?.touched">
+        <p class="text-center text-danger">*Accept Characters Only</p>
+    </div>
+
+    <input formControlName="address" type="text" id="p5" placeholder="Address" class="form-control mt-2">
+    <div *ngIf="this.addpatientForm.get('address')?.errors && this.addpatientForm.get('address')?.touched">
+        <p class="text-center text-danger">*Include Characters and Numbers Only</p>
+    </div>
+
+    <input formControlName="phone" type="text" id="p6" placeholder="Phone" class="form-control mt-2">
+    <div *ngIf="this.addpatientForm.get('phone')?.errors && this.addpatientForm.get('phone')?.touched">
+        <p class="text-center text-danger">*Accept Numbers Only and Include 10 Numbers</p>
+    </div>
+
+    <input formControlName="doctorsName" type="text" id="p7" placeholder="Doctor's name" class="form-control mt-2">
+    <div *ngIf="this.addpatientForm.get('doctorsName')?.errors && this.addpatientForm.get('doctorsName')?.touched">
+        <p class="text-center text-danger">*Accept Characters Only</p>
+    </div>
+
+
+
+    <button (click)="addpatient()" type="submit" class="btn btn btn-outline-light mt-3 mb-4" style="background-color:  #21D192;">Add </button>
+</form>
+<div class="text-end me-5">
+    <form  >
+        <a class="btn btn-outline-success " (click)="backtodetails() " >Back</a>
+      </form>
+    
+</div>

@@ -1,0 +1,55 @@
+<app-admin-header></app-admin-header>
+
+<nav class="navbar">
+  <div class="container">
+    <form class="" role="search">
+      <button class="btn btn-outline ms-5" style="background-color: #21D192;" (click)="addpatient()" type="submit">Add Patient Details</button>
+    </form>
+  </div>
+
+</nav>
+<h1 class="text-center conatiner p-3" style="color: #21D192;;">Manage Patient Details</h1>
+
+<table class="table table-success table-striped conatiner p-3 mt-3  ">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">pId</th>
+        <th scope="col">Patient Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Sex</th>
+        <th scope="col">Address</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Doctor's Name</th>
+        <th scope="col">Actions</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of pdata let j=index">
+        <th scope="row">{{j+1}}</th>
+        <td>{{i.pId}}</td>
+        <td>{{i.pname}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.sex}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.doctorsName}}</td>
+        <td>
+          <button (click)="edit(i._id)" class="btn " style="background-color: #21D192;" ><i class="fa-solid fa-pencil"></i></button>
+          <button class="btn btn-danger ms-2"><i class="fa-solid fa-trash "></i></button>
+
+        </td>
+
+
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-end me-4">
+    <form  >
+        <a class="btn btn-outline-success " (click)=" backHome()" >Back To Home</a>
+      </form>
+    
+</div>
+

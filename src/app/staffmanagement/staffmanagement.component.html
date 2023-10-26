@@ -1,0 +1,47 @@
+<app-admin-header></app-admin-header>
+
+
+<nav class="navbar">
+    <div class="container">
+      <form class="" role="search">
+        <button class="btn btn-outline ms-5" style="background-color: #21D192;" (click)="addStaff()" type="submit">Add Staff Details</button>
+      </form>
+    </div>
+  
+  </nav>
+
+<table class="table table table-success table-striped conatiner p-3 mt-3 w-75 ms-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-end me-4">
+    <form  >
+        <a class="btn btn-outline-success " (click)=" backHome()" >Back To Home</a>
+      </form>
+    
+</div>
