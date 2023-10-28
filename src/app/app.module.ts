@@ -22,7 +22,9 @@ import { EditPatientComponent } from './edit-patient/edit-patient.component';
 import { StaffsingleviewComponent } from './staffsingleview/staffsingleview.component';
 import { PatientregisterComponent } from './patientregister/patientregister.component';
 import { StaffeditComponent } from './staffedit/staffedit.component';
-import { BookappointmentComponent } from './bookappointment/bookappointment.component'
+import { BookappointmentComponent } from './bookappointment/bookappointment.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { SearchinputComponent } from './searchinput/searchinput.component'
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { BookappointmentComponent } from './bookappointment/bookappointment.comp
     StaffsingleviewComponent,
     PatientregisterComponent,
     StaffeditComponent,
-    BookappointmentComponent
+    BookappointmentComponent,
+    SearchPipe,
+    SearchinputComponent
   ],
   imports: [
     BrowserModule,

@@ -17,13 +17,13 @@ ngOnInit():void{
     this.pid=data.id
 console.log(this.pid);
 
-this.med.getsinglestaff(this.pid).subscribe({
-  next:(result:any)=>{
-    // console.log(result);
+// this.med.getsinglestaff(this.pid).subscribe({
+//   next:(result:any)=>{
+//     // console.log(result);
     
-  }
+//   }
   
-})
+// })
 this.med.getsinglestaff(this.pid).subscribe({
   next:(result:any)=>{
     this.sdata=result.message

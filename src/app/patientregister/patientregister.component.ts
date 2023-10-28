@@ -30,17 +30,20 @@ register(){
   var address=path.address
   var phone=path.phone
   var doctorsName=path.doctorsName
-  this.med.patientregister(pId,pname,age,sex,address,phone,doctorsName).subscribe({
-    next:(result:any)=>{
-      alert(result.message)
-      this.rout.navigateByUrl("user-login")
-    },
-    error:(result:any)=>{
-      alert(result.error.message)
-      this.rout.navigateByUrl("user-login")
-
-    }
-  })
+  if(this.patientregisterform.valid){
+    this.med.patientregister(pId,pname,age,sex,address,phone,doctorsName).subscribe({
+      next:(result:any)=>{
+        alert(result.message)
+        this.rout.navigateByUrl("user-login")
+      },
+      error:(result:any)=>{
+        alert(result.error.message)
+        this.rout.navigateByUrl("user-login")
+  
+      }
+    })
+  
+  }
 
 }
 

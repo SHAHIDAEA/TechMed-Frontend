@@ -1,10 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MedService {
+
+  //behaviorsubject
+  search=new BehaviorSubject("")
 
   baseUrl="http://localhost:5000"
 
@@ -81,5 +85,11 @@ patientregister(pId:any,pname:any,age:any,sex:any,address:any,phone:any,doctorsN
 patientlogin(pId:any,phone:any){
   const body={pId,phone}
   return this.http.post(`${this.baseUrl}/patient/login`,body)
+}
+
+//api to slot booking
+slotbooking(id:any){
+
+  // return this.http.post(`${this.baseUrl}/appointment/booking/${id}`)
 }
 }

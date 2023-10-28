@@ -21,10 +21,11 @@ export class StaffsingleviewComponent {
         next: (result: any) => {
           this.pdata = result.message
           console.log(this.pdata);
-          
+        localStorage.setItem("sid",this.pid)
         }
       })
     })
+
   }
 
   bookstaffappointment(){

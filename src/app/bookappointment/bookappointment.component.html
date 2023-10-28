@@ -1,1 +1,39 @@
-<app-header></app-header>
+<app-admin-header></app-admin-header>
+<h1 class="text-center container mt-5" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:  #21D192;">Book Your Slots</h1>
+<form  action="" class="w-50 container text-center bg-secondary p-3" style="border-radius: 10px;">
+<div>
+        <input [(ngModel)]="pdata.pId" type="text" id="p1" placeholder="PId" name="pid" class="form-control mt-2">
+        <input [(ngModel)]="pdata.pname"  type="text" id="p2" placeholder="Patient Name" name="name" class="form-control mt-2">
+       <input [(ngModel)]="pdata.phone" type="text" id="p6" placeholder="Phone" name="phone" class="form-control mt-2">
+    
+</div>
+<div>
+<h2>Payment</h2>
+<form [formGroup]="paymentform">
+        <input formControlName="amount" type="text" id="p1" placeholder="Amount" class="form-control mt-2">
+        <div *ngIf="this.paymentform.get('amount')?.errors && this.paymentform.get('amount')?.touched">
+                <p class="text-center text-danger">*Include Numbers Only</p>
+            </div>
+        
+        <input formControlName="bname"  type="text" id="p1" placeholder="Bank Name" class="form-control mt-2">
+        <div *ngIf="this.paymentform.get('bname')?.errors && this.paymentform.get('bname')?.touched">
+                <p class="text-center text-danger">*Include Characters Only</p>
+            </div>
+
+        <input formControlName="acno"   type="text" id="p2" placeholder="Account Number" class="form-control mt-2">
+        <div *ngIf="this.paymentform.get('acno')?.errors && this.paymentform.get('acno')?.touched">
+                <p class="text-center text-danger">*Include Numbers Only</p>
+            </div>
+
+        <input formControlName="psw"  type="text" id="p6" placeholder="PIN Number" class="form-control mt-2">
+        <div *ngIf="this.paymentform.get('psw')?.errors && this.paymentform.get('psw')?.touched">
+                <p class="text-center text-danger">*Include Characters and Numbers Only</p>
+            </div>
+
+        
+</form>
+</div>
+<button (click)="return()" type="submit" class="btn btn btn-outline-light mt-3 mb-4" style="background-color:  #21D192;">Pay</button>
+
+</form>
+

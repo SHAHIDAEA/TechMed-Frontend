@@ -25,7 +25,7 @@ this.med.patientlogin(this.patientloginForm.value.pId,this.patientloginForm.valu
     alert(result.message)
     localStorage.setItem("patient",result._id)
     localStorage.setItem("pId",result.PId)
-    this.rout.navigateByUrl("")
+    this.rout.navigateByUrl("book-appointment")
   },
   error:(result:any)=>{
     alert(result.error.message)
