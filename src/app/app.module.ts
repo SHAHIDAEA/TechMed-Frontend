@@ -10,7 +10,7 @@ import { PatientmanagementComponent } from './patientmanagement/patientmanagemen
 import { StaffmanagementComponent } from './staffmanagement/staffmanagement.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddStaffComponent } from './add-staff/add-staff.component';
 import { EditStaffComponent } from './edit-staff/edit-staff.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
@@ -18,7 +18,11 @@ import { AppointmentsComponent } from './appointments/appointments.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
-import { EditPatientComponent } from './edit-patient/edit-patient.component'
+import { EditPatientComponent } from './edit-patient/edit-patient.component';
+import { StaffsingleviewComponent } from './staffsingleview/staffsingleview.component';
+import { PatientregisterComponent } from './patientregister/patientregister.component';
+import { StaffeditComponent } from './staffedit/staffedit.component';
+import { BookappointmentComponent } from './bookappointment/bookappointment.component'
 
 
 @NgModule({
@@ -37,13 +41,18 @@ import { EditPatientComponent } from './edit-patient/edit-patient.component'
     AppointmentsComponent,
     UserloginComponent,
     AdminHeaderComponent,
-    EditPatientComponent
+    EditPatientComponent,
+    StaffsingleviewComponent,
+    PatientregisterComponent,
+    StaffeditComponent,
+    BookappointmentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

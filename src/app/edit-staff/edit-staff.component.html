@@ -1,1 +1,29 @@
-<p>edit-staff works!</p>
+<app-admin-header></app-admin-header>
+
+<h1 class="text-center container mt-5" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:  #21D192;">Edit Staff Details</h1>
+<form  action="" class="w-50 container text-center">
+    <input [(ngModel)]="sdata.docname" type="text" id="p2" name="name" placeholder= "Name" class="form-control mt-2">
+
+    <input [(ngModel)]="sdata.specialization"  type="text" name="spacialization" id="p3" placeholder="Age" class="form-control mt-2">
+
+    <input [(ngModel)]="sdata.about" type="text" id="p4" placeholder="About" name="about" class="form-control mt-2">
+
+    <input [(ngModel)]="sdata.image" type="text" id="p5" placeholder="Address" name="address" class="form-control mt-2">
+
+    <input [(ngModel)]="sdata.education" type="text" id="p6" placeholder="Phone" name="phn" class="form-control mt-2">
+
+    <input [(ngModel)]="sdata.consultationfee" type="text" id="p7" placeholder="Doctor's name" name="doc" class="form-control mt-2">
+
+    <input [(ngModel)]="sdata.appointments" type="text" id="p8" placeholder="Doctor's name" name="d" class="form-control mt-2">
+    <input [(ngModel)]="sdata.categoryId" type="text" id="p9" placeholder="Doctor's name" name="dc" class="form-control mt-2">
+    <input [(ngModel)]="sdata.slots_available" type="text" id="p10" placeholder="Doctor's name" name="do" class="form-control mt-2">
+
+
+    <button (click)="updatestaff()"  type="submit" class="btn btn btn-outline-light mt-3 mb-4" style="background-color:  #21D192;">Update</button>
+</form>
+<div class="text-end me-5">
+    <form  >
+        <a class="btn btn-outline-success " (click)="backtodetails() " >Back</a>
+      </form>
+    
+</div>

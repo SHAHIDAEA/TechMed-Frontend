@@ -27,6 +27,14 @@ ngOnInit():void{
   })
 }
 
+editpatientdetails(){
+  this.med.editPatientDetails(this.pid,this.pdata).subscribe({
+    next:(result:any)=>{
+      alert(result.message)
+    }
+  })
+}
+
   backtodetails(){
     this.rout.navigateByUrl("patient-management")
   }

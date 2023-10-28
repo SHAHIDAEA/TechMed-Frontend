@@ -1,0 +1,17 @@
+<app-header></app-header>
+    <h1 class="text-center container mt-5" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:  #21D192;">Register</h1>
+        <form [formGroup]="patientregisterform" action="" class="w-50 container text-center">
+            <input formControlName="pId"  type="text" id="p1" placeholder="PId" class="form-control mt-2">
+            <input formControlName="pname"  type="text" id="p2" placeholder="Patient Name" class="form-control mt-2">
+            <input formControlName="age"  type="text" id="p3" placeholder="Age" class="form-control mt-2">
+            <input formControlName="sex"  type="text" id="p4" placeholder="Sex" class="form-control mt-2">
+            <input formControlName="address" type="text" id="p5" placeholder="Address" class="form-control mt-2">
+            <input formControlName="phone" type="text" id="p6" placeholder="Phone" class="form-control mt-2">
+        
+            <input formControlName="doctorsName" type="text" id="p7" placeholder="Doctor's name" class="form-control mt-2">
+        
+        
+        
+            <button (click)="register()" type="submit" class="btn btn btn-outline-light mt-3 mb-4" style="background-color:  #21D192;">Register</button>
+    
+    

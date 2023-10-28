@@ -1,26 +1,57 @@
 <app-admin-header></app-admin-header>
 
 <h1 class="text-center container mt-5" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:  #21D192;">Add New Staff</h1>
-<form action="" class="w-50 container text-center">
-    <input  type="text" id="p1" placeholder="sId" class="form-control mt-2">
-    <input  type="text" id="p2" placeholder="Doctor's Name" class="form-control mt-2">
-
-    <input  type="text" id="p3" placeholder="Category Id" class="form-control mt-2">
-
-    <input  type="text" id="p4" placeholder="Specialization" class="form-control mt-2">
-
-    <input  type="text" id="p5" placeholder="About" class="form-control mt-2">
-
-    <input  type="text" id="p6" placeholder="Image" class="form-control mt-2">
-
-    <input  type="text" id="p7" placeholder="Education" class="form-control mt-2">
-    <input  type="text" id="p8" placeholder="Experience" class="form-control mt-2">
-
-    <input  type="text" id="p9" placeholder="Consultaion Fee" class="form-control mt-2">
-    <input  type="text" id="p10" placeholder="Available Slots" class="form-control mt-2">
+<form [formGroup]="addstaffform" action="" class="w-50 container text-center">
+    <input formControlName="docname"  type="text" id="p2" placeholder="Doctor's Name" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('docname')?.errors && this.addstaffform.get('docname')?.touched">
+        <p class="text-center text-danger">*Include Characters Only</p>
+    </div>
 
 
-    <button type="submit" class="btn btn btn-outline-light mt-3 mb-4" style="background-color:  #21D192;">Add</button>
+    <input formControlName="specialization" type="text" id="p4" placeholder="Specialization" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('docname')?.errors && this.addstaffform.get('docname')?.touched">
+        <p class="text-center text-danger">*Include Characters Only</p>
+    </div>
+
+    <input formControlName="about" type="text" id="p5" placeholder="About" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('about')?.errors && this.addstaffform.get('about')?.touched">
+        <p class="text-center text-danger">*Include Characters and Numbers Only</p>
+    </div>
+
+    <input formControlName="image"  type="text" id="p6" placeholder="Image" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('image')?.errors && this.addstaffform.get('image')?.touched">
+        <p class="text-center text-danger">*Include url Only</p>
+    </div>
+
+    <input formControlName="education"  type="text" id="p7" placeholder="Education" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('education')?.errors && this.addstaffform.get('education')?.touched">
+        <p class="text-center text-danger">*Include Characters and Numbers Only</p>
+    </div>
+
+    <input formControlName="consultationfee" type="text" id="p9" placeholder="Consultaion Fee" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('consultationfee')?.errors && this.addstaffform.get('consultationfee')?.touched">
+        <p class="text-center text-danger">*Include Numbers Only</p>
+    </div>
+
+    <input formControlName="appointments" type="text" id="p9" placeholder="Appointments" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('appointments')?.errors && this.addstaffform.get('appointments')?.touched">
+        <p class="text-center text-danger">*Include Numbers Only</p>
+    </div>
+
+    <input formControlName="categoryId" type="text" id="p9" placeholder="Category Id" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('categoryId')?.errors && this.addstaffform.get('categoryId')?.touched">
+        <p class="text-center text-danger">*Include Numbers Only</p>
+    </div>
+
+
+    <input formControlName="slots_available"  type="text" id="p10" placeholder="Available Slots" class="form-control mt-2">
+    <div *ngIf="this.addstaffform.get('slots_available')?.errors && this.addstaffform.get('slots_available')?.touched">
+        <p class="text-center text-danger">*Include Numbers Only</p>
+    </div>
+
+
+
+    <button (click)="addnewstaff()" type="submit" class="btn btn btn-outline-light mt-3 mb-4" style="background-color:  #21D192;">Add</button>
 </form>
 <div class="text-end me-5">
     <form  >

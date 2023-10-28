@@ -39,5 +39,47 @@ editPatientDetails(id:any,bodyData:any){
 getpatient(id:any){
   return this.http.get(`${this.baseUrl}/singlepatient/details/access/${id}`)
 }
+//api to delete
+deletePatient(id:any){
+  return this.http.delete(`${this.baseUrl}/patient/details/delete/${id}`)
+}
 
+//api to add staff
+addstaff(body:any){
+  return this.http.post(`${this.baseUrl}/add/staff`,body)
+}
+
+//api to get staff details
+getallStaff(){
+  return this.http.get(`${this.baseUrl}/patient/access`)
+}
+
+//api to edit staff
+editstaff(id:any,bodyData:any){
+  return this.http.put(`${this.baseUrl}/staff/details/edit/${id}`,bodyData)
+}
+
+//api to get single staff data
+getsinglestaff(id:any){
+  return this.http.get(`${this.baseUrl}/singlestaff/${id}`)
+}
+
+//api to delete staff
+deletestaff(id:any){
+  return this.http.delete(`${this.baseUrl}/staff/details/delete/${id}`)
+
+}
+
+//api to patient-register
+patientregister(pId:any,pname:any,age:any,sex:any,address:any,phone:any,doctorsName:any){
+  const body={pId,pname,age,sex,address,phone,doctorsName}
+  return this.http.post(`${this.baseUrl}/patient/register`,body)
+
+}
+
+//api to patient login
+patientlogin(pId:any,phone:any){
+  const body={pId,phone}
+  return this.http.post(`${this.baseUrl}/patient/login`,body)
+}
 }

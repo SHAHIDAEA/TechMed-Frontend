@@ -9,26 +9,42 @@ import { MedService } from '../med.service';
 })
 export class PatientmanagementComponent {
 
-  pdata:any=[]
-  constructor(private route:Router,private med:MedService){
+  pdata: any = []
+  constructor(private route: Router, private med: MedService) {
   }
- ngOnInit():void{
-  this.med.getPatientDetails().subscribe({
-    next:(result:any)=>{
-      // console.log(result.message);
-      this.pdata=result.message
-    }
-  })
- }
-  backHome(){
-   this.route.navigateByUrl("admin-home")
+  ngOnInit(): void {
+    this.med.getPatientDetails().subscribe({
+      next: (result: any) => {
+        // console.log(result.message);
+        this.pdata = result.message
+      }
+    })
+  }
+  backHome() {
+    this.route.navigateByUrl("admin-home")
   }
 
-  addpatient(){
+  addpatient() {
     this.route.navigateByUrl("add-patients")
-  }  
-  edit(id:any){
+  }
+  edit(id: any) {
     this.route.navigateByUrl(`edit-patient-details/${id}`)
   }
- 
+
+  deletePatient(id: any) {
+   this.med.deletePatient(id).subscribe({
+       next: (result: any) => {
+      alert(result.message)
+
+
+            this.med.getPatientDetails().subscribe({
+              next:(result:any)=>{
+                // console.log(result.message);
+                this.pdata=result.message
+              }
+            })
+
+      }
+    })
+  }
 }

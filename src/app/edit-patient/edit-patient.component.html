@@ -2,21 +2,21 @@
 
 <h1 class="text-center container mt-5" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:  #21D192;">Edit Patient Details</h1>
 <form  action="" class="w-50 container text-center">
-    <input   type="text" id="p2" name="" placeholder="Patient Name" class="form-control mt-2">
+    <input [(ngModel)]="pdata.pname"  type="text" id="p2" name="name" placeholder="Patient Name" class="form-control mt-2">
 
-    <input   type="text" id="p3" placeholder="age" class="form-control mt-2">
+    <input [(ngModel)]="pdata.age"  type="text" name="age" id="p3" placeholder="age" class="form-control mt-2">
 
-    <input type="text" id="p4" placeholder="Sex" class="form-control mt-2">
+    <input [(ngModel)]="pdata.sex" type="text" id="p4" placeholder="Sex" name="sex" class="form-control mt-2">
 
-    <input  type="text" id="p5" placeholder="Address" class="form-control mt-2">
+    <input [(ngModel)]="pdata.address" type="text" id="p5" placeholder="Address" name="address" class="form-control mt-2">
 
-    <input  type="text" id="p6" placeholder="Phone" class="form-control mt-2">
+    <input [(ngModel)]="pdata.phone" type="text" id="p6" placeholder="Phone" name="phn" class="form-control mt-2">
 
-    <input  type="text" id="p7" placeholder="Doctor's name" class="form-control mt-2">
+    <input [(ngModel)]="pdata.doctorsName" type="text" id="p7" placeholder="Doctor's name" name="doc" class="form-control mt-2">
 
 
 
-    <button  type="submit" class="btn btn btn-outline-light mt-3 mb-4" style="background-color:  #21D192;">Update</button>
+    <button (click)="editpatientdetails()" type="submit" class="btn btn btn-outline-light mt-3 mb-4" style="background-color:  #21D192;">Update</button>
 </form>
 <div class="text-end me-5">
     <form  >

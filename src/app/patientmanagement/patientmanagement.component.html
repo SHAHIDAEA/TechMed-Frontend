@@ -35,10 +35,10 @@
         <td>{{i.sex}}</td>
         <td>{{i.address}}</td>
         <td>{{i.phone}}</td>
-        <td>{{i.doctorsName}}</td>
+        <td>Dr. {{i.doctorsName}}</td>
         <td>
           <button (click)="edit(i._id)" class="btn " style="background-color: #21D192;" ><i class="fa-solid fa-pencil"></i></button>
-          <button class="btn btn-danger ms-2"><i class="fa-solid fa-trash "></i></button>
+          <button (click)="deletePatient(i._id)" class="btn btn-danger ms-2"><i class="fa-solid fa-trash "></i></button>
 
         </td>
 

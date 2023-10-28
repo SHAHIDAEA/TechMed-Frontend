@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src={{pdata.image}} alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1"><i style="color: #3c9f71;" class="fa-solid fa-graduation-cap"></i> {{pdata.education}}</div>
+                <h3 class="display-5 fw-bolder">Dr.{{pdata.docname}}</h3>
+                <div class="fs-5 mb-5">
+                    <span class="text-secondary"><i style="color: #3c9f71;" class="fa-solid fa-user-doctor"></i> {{pdata.specialization}}</span>
+                </div>
+                <p class="lead">{{pdata.about}}</p>
+                <h5 style="color: rgba(58, 58, 181, 0.563);"><i style="color: #3c9f71;"  class="fa-solid fa-indian-rupee-sign"></i> {{pdata.consultationfee}}</h5>
+                <p  class="lead"><strong style="color: rgba(22, 22, 96, 0.627);">Available Slots</strong> : {{pdata.slots_available}}</p>
+                <h5 style="color: 3c9f71;">Appointments : {{pdata.appointments}}</h5>
+                <div class="d-flex">
+                    <button (click)="bookstaffappointment()" style="background-color: rgba(81, 203, 81, 0.19);" class="btn " type="button">
+                        <i class="bi-cart-fill me-1"></i>
+                        Book Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
